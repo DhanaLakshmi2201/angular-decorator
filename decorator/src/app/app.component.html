@@ -1,1 +1,10 @@
-git 
+<h1><i>Hello  {{name}}</i></h1>
+<input [disabled]="name1" type="text" value="Property Binding">
+<h1>Event Binding </h1>
+<button (click)='onclick()'>Submit</button><br>
+{{event}}
+
+<h1> Two way Binding </h1>
+<input [(ngModel)]='twoway' type="text"><br>
+{{twoway}}
+
