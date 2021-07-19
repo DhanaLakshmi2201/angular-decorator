@@ -1,21 +1,21 @@
 <h1><i>Hello  {{name}}</i></h1>
-<input [disabled]="name1" type="text" value="Property Binding">
+<input [disabled]="name1" type="text" value="Property Binding"><hr>
 <h1>Event Binding </h1>
 <button (click)='onclick()'>Submit</button><br>
 {{event}}
-
+<hr>
 <h1> Two way Binding </h1>
 <input [(ngModel)]='twoway' type="text"><br>
 {{twoway}}
-
+<hr>
+<hr>
 <h1> Structural Decorative</h1>
 
 <h2>Ng If</h2>
-<div *ngIf="display,then thenblock else elseblock"></div>
+<div *ngIf="display;then thenblock;else elseblock"></div>
 <ng-template #thenblock>
     <h2>I am from then block</h2>
 </ng-template>
-
 
 <ng-template #elseblock>
     <h2>i am from Else block </h2>
@@ -23,27 +23,31 @@
 </ng-template>
 
 <div *ngIf="isShow">i am from ng if block</div>
-
+<hr>
 <h1>Ng For</h1>
 <div *ngFor='let name of names'>
 <h3>{{name}}</h3>
 </div>
-
+<hr>
 <h2>Ng Switch</h2>
 
 <div [ngSwitch]="color">
 <div *ngSwitchCase="'red'"><h1> i am selected red color</h1></div>
     <div *ngSwitchCase="'blue'"><h1>I am selected blue color </h1></div>
     <div *ngSwitchCase="'green'"><h1>I am selected green color</h1></div>
+    <div *ngSwitchDefault>i am from default</div>
 </div>
-
+<hr>
 <h1>Input Decorator</h1>
 <app-test [data]="name5"></app-test>
-
+<hr>
 <h1>Output Decorator</h1>
 <app-test (childEvent)="message=$event"></app-test>
 <h2>{{message}}</h2>
-
+<hr>
 <h1>View Child</h1>
 <button (click)="viewchild()"> view Child</button>
+<hr>
+<router-outlet>````</router-outlet>
+
 

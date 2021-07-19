@@ -8,15 +8,16 @@ import { TestComponent } from './test/test.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'decorator';
   name='This is Interpolition';
-  name1=true;
+  name1=false;
   event=" ";
   twoway=" ";
-  display="true";
-  isShow="false";
-  names=["tom","ramya","ammu","pattu"]
-  color="red";
+  display=false;
+  isShow=true;
+  names=["tom","ramya","ammu","pattu","nishanthan"]
+  color="";
   name5="Input Decorator";
   message=" ";
   @ViewChild(TestComponent)child:any;

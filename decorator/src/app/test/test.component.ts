@@ -16,7 +16,7 @@ export class TestComponent implements OnInit {
   @Output()childEvent= new EventEmitter();
 
   visible=true;
-  name="rose";
+  name="dhanalakshmi";
   message="hello";
 
 
