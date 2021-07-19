@@ -1,5 +1,6 @@
 import { removeSummaryDuplicates } from '@angular/compiler';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { TestComponent } from './test/test.component';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,19 @@ export class AppComponent {
   name1=true;
   event=" ";
   twoway=" ";
+  display="true";
+  isShow="false";
+  names=["tom","ramya","ammu","pattu"]
+  color="red";
+  name5="Input Decorator";
+  message=" ";
+  @ViewChild(TestComponent)child:any;
+
   
   onclick(){
     this.event="on Click Concept"
+  }
+  viewchild(){
+  this.child.visible=!this.child.visible;
   }
 }

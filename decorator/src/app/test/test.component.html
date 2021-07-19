@@ -1,0 +1,15 @@
+<p>{{name5}}</p><br>
+
+
+<button (click)="outputEvent()">Send Event</button>
+
+
+<p *ngIf=visible> Hi i am from view child</p>
+
+<h1>Pipes</h1>
+{{name | uppercase}}<br>
+{{name | titlecase}}<br>
+{{name | slice:1:4}}<br>
+{{0.50 | currency}}<br>
+{{0.50 | currency:'INR'}}<br>
+{{0.50 | percent}}
